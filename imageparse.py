@@ -13,7 +13,7 @@ import sys, argparse, binascii, hexparse
 
 
 def main():
-	parser = argparse.ArgumentParser(prog="DNS")
+	parser = argparse.ArgumentParser(prog="Image PArse")
 	group = parser.add_mutually_exclusive_group(required=True)
 	group.add_argument("-s", "--string", help="Enter String in single quotes of the pcap data") 
 	group.add_argument("-f", "--file", help="Enter File containing the hex dump of the dns query request") 
