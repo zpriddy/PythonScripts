@@ -34,19 +34,12 @@ def main():
 			lines = raw
 
 
-	hex_test= True
-
-	for line in lines:
-		hex_test = hex_test and is_hex(line)
-
-	
-	if(hex_test):
+	try:
 		for line in lines:
-
 			data = data + parse_hex_data(line)
 
 		print data
-	else:
+	except:
 		print "IS NOT HEX"
 
 
@@ -134,8 +127,8 @@ def parse_hex_data(input_string, max_width=16):
 		return hex_output
 
 	else:
+		raise NameError('IsNotHex')
 
-		return "ERROR: IS NOT HEX"
 
 
 if __name__ == '__main__':
